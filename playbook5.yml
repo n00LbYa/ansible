@@ -22,7 +22,7 @@
 
   - name: Copy  MyHomePage to Servers
     copy: src={{ source_file }}  dest={{ destin_file }} mode=0555
-    notify: Restart Apache
+    notify: Restart Apache RedHat
 
   - name: Start WebServer for RedHat
     service: name=httpd state=started enabled=yes
